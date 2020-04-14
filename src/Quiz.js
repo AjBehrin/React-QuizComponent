@@ -29,8 +29,8 @@ class Quiz extends React.Component {
 
         return (
             <div>
-                {isQuizEnd ? <QuizEnd /> : 
-                    <QuizQuestion resetClickHandler={this.handleResetClick.bind(this)} showNextQuestionHandler={this.showNextQuestion.bind(this)} quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]} 
+                {isQuizEnd ? <QuizEnd resetClickHandler={this.handleResetClick.bind(this)} /> : 
+                    <QuizQuestion showNextQuestionHandler={this.showNextQuestion.bind(this)} quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]} 
                 />}
             </div>
         )
